@@ -12,6 +12,38 @@ class Board():
         """Create a new instance of the board"""
         print self.board
 
+    def can_win():
+        """Show options for winning combinations"""
+        winning_combos = [
+            [board[0][0], board[0][1], board[0][2]],
+            [board[1][0], board[1][1], board[1][2]],
+            [board[2][0], board[2][1], board[2][2]],
+            [board[0][0], board[1][0], board[2][0]],
+            [board[0][1], board[1][1], board[2][1]],
+            [board[0][2], board[1][2], board[2][2]],
+            [board[0][0], board[1][1], board[2][2]],
+            [board[0][2], board[1][1], board[2][0]],
+        ]
+        return winning_combos
+
+    def is_center():
+        """Check to see if spot is the center"""
+        center = board[1][1]
+        return center
+
+    def is_corner():
+        """Check to see if spot is a corner"""
+        corners = [
+            board[0][0], board[0][2], board[2][0], board[2][2]
+        ]
+        return corners
+
+    def is_side():
+        """Check to see if spot is a side"""
+        sides = [
+            board[0][1], board[1][0], board[1][2], board[2][1]
+        ]
+        return sides
 
 if __name__ == "__main__":
     new_board = Board()
@@ -27,5 +59,4 @@ if __name__ == "__main__":
         # if human can win, block human win
         # else... make a random move? corners are strong, which means:
 
-# board might need more specific breakdowns:
-    # center, corners, sides
+# this should all be separated out into a play class...
