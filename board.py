@@ -1,16 +1,21 @@
 class Board():
 
-    def draw_board(self):
-        """Create a new instance of the board"""
-        board = [
+    def __init__(self):
+        """Initialize board with three rows"""
+        self.board = [
             ["_", "_", "_"],
             ["_", "_", "_"],
             ["_", "_", "_"],
         ]
-        print board
 
-new_board = Board()
-new_board.draw_board()
+    def draw_board(self):
+        """Create a new instance of the board"""
+        print self.board
+
+
+if __name__ == "__main__":
+    new_board = Board()
+    new_board.draw_board()
 
 
 # up next: implementation of game logic
