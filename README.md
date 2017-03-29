@@ -36,5 +36,5 @@ For a little extra credit:
 1. Create a virtual environment for the app. `virtualenv venv`
 1. Enter the virtual environment. `source venv/bin/activate`
 1. Install Flask. `pip install Flask`
-1. Set Flask instance. `export FLASK_APP=game.py`
+1. Set Flask instance. `export FLASK_APP=play.py`
 1. Run the app. `flask run`
